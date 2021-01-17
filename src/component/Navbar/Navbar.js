@@ -1,15 +1,10 @@
 import React from "react";
 import useStyles from "./Style";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { Container, Button, Toolbar } from "@material-ui/core";
+import { Container, Button } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import CallIcon from "@material-ui/icons/Call";
 import { NavData } from "./NavData";
-
 import { AppBar } from "@material-ui/core";
-// import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import HeadNav from "./HeadNav";
 import Logo from "../Logo/Logo";
 
@@ -28,21 +23,33 @@ export default function Navbar(props) {
 
         <AppBar
           position="static"
-          color="default"
+          color="inherit"
           elevation={0}
           className={classes.appBar}
         >
-          <Grid container spacing={1} justify="space-evenly">
-            <Grid item xg={1}>
-              <Logo style={{ color: "black" }} />
+          <Grid
+            container
+            spacing={0}
+            justify="space-evenly"
+            style={{ marginTop: "10px" }}
+          >
+            <Grid item xg={1} xs={0}>
+              <Logo />
             </Grid>
-            <Grid item xg={9}>
-              <nav>
+            <Grid item xg={9} xs={0}>
+              <nav
+                display="flex"
+                alignItems="flex-center"
+                justify="flex-center"
+                className={classes.nav}
+              >
                 {NavData.map((item, index) => {
                   return (
                     <Link
+                      textTransform="none"
+                      underline="none"
+                      p={1}
                       variant="button"
-                      color="textPrimary"
                       href="#"
                       className={classes.Link}
                     >
@@ -52,14 +59,15 @@ export default function Navbar(props) {
                 })}
               </nav>
             </Grid>
-            <Grid item xg={2}>
+            <Grid item xg={2} xs={0} style={{ paddingTop: "18px" }}>
               <Button
-                href="#"
+                className={classes.ButtonSub}
+                variant="contained"
                 color="primary"
-                variant="outlined"
-                className={classes.link}
+                size="large"
+                textTransform="none"
               >
-                Login
+                Get a quote
               </Button>
             </Grid>
           </Grid>

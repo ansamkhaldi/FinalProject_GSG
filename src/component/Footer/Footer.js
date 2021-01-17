@@ -45,13 +45,6 @@ export default function Footer() {
     <Container maxWidth="xg" component="footer" className={classes.footer}>
       <Grid container spacing={0} justify="space-evenly">
         <Grid item sm={12} md={6} className={classes.gridLeft}>
-          {/* <Toolbar className={classes.Toolbar}>
-            <img src={Logo} alt="Logo" />
-            <Typography className={classes.typography}>
-              <div>Neighborhood</div>
-              <div className={classes.Typography1}>PHARMACY</div>
-            </Typography>
-          </Toolbar> */}
           <Logo />
 
           <Typography
@@ -77,7 +70,7 @@ export default function Footer() {
             <Button
               className={classes.ButtonSub}
               variant="contained"
-              color="primary"
+              color="secondary"
               size="large"
             >
               Subscribe

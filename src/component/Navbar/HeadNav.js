@@ -1,6 +1,5 @@
 import React from "react";
-import { AppBar, Grid } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import { Grid, Link } from "@material-ui/core";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import CallIcon from "@material-ui/icons/Call";
 import useStyles from "./Style";
@@ -8,18 +7,11 @@ import useStyles from "./Style";
 function HeadNav(props) {
   const classes = useStyles();
   return (
-    // <AppBar
-    //   position="absolute"
-    //   alignItems
-    //   color="inherit"
-    //   className={classes.topNav}
-    //   style={{ boxShadow: "none" }}
-    // >
     <Grid
       container
       spacing={0}
       justify="space-evenly"
-      style={{ borderBottom: `1px solid red` }}
+      style={{ borderBottom: `1px solid #c2c2c2`, padding: "0% 3%" }}
     >
       <Grid item lg={2} xs={4}>
         <p className={classes.typography}>COVID UPDATE</p>
@@ -42,7 +34,6 @@ function HeadNav(props) {
         </Link>
       </Grid>
     </Grid>
-    // </AppBar>
   );
 }
 

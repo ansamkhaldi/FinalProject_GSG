@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.primary.contrastText,
-    // flexGrow: 1,
+    flexGrow: 1,
   },
   topNav: {
     minHeight: 53,
@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    padding: "0% 4%",
   },
   toolbar: {
     flexWrap: "wrap",
@@ -64,7 +65,32 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   Link: {
-    margin: theme.spacing(2),
+    // margin: theme.spacing(2),
+    textTransform: "initial",
+    color: theme.palette.grey[200],
+    //marginTop: "30px",
+    padding: "10px",
+    fontSize: "14px",
+    "&:hover": {
+      color: theme.palette.primary.dark,
+    },
+  },
+  nav: {
+    paddingTop: "20px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  ButtonSub: {
+    textTransform: "none",
+    // fontFamily: theme.typography.body1.fontFamily,
+    backgroundColor: theme.palette.primary.light,
+    border: `2px solid ${theme.palette.primary.light}`,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.contrastText,
+      color: theme.palette.primary.light,
+      borderRadius: 4,
+    },
   },
 }));
 

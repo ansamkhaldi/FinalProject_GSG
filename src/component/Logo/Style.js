@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     fontWeight: 700,
     padding: "0 7px",
-    color: theme.palette.primary.contrastText,
+    // color: theme.palette.primary.contrastText,
     fontSize: 23,
     lineHeight: 1.3,
     fontFamily: theme.overrides.MuiTypography.fontFamily,

@@ -40,5 +40,20 @@ const theme = createMuiTheme({
     },
   },
 });
-
+theme.typography.h1 = {
+  fontSize: "1.2rem",
+  fontFamily: "Merriweather",
+  color: "#1349b0",
+  fontWeight: 700,
+  fontStyle: "normal",
+  lineHeight: 1.2,
+  letterSpacing: "0px",
+  "@media (min-width:600px)": {
+    fontSize: "1.5rem",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "4rem",
+    // fontSize: "60px",
+  },
+};
 export default theme;

@@ -4,7 +4,7 @@ import logo from "../../assest/image/logo.png";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Style";
 
-function Logo(props) {
+function Logo() {
   const classes = useStyles();
   return (
     <Toolbar className={classes.Toolbar}>
