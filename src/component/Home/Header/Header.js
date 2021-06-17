@@ -1,6 +1,5 @@
 import React from "react";
-import { Toolbar, Paper, Typography } from "@material-ui/core";
-import HeaderImage from "../../../assest/image/Header.jpg";
+import { Typography } from "@material-ui/core";
 import useStyles from "./Style";
 
 export default function Header(props) {

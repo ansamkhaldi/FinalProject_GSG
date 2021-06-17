@@ -29,14 +29,14 @@ export const NavData = [
     path: "/HealthNews",
     cName: "nav-text",
   },
-  {
-    title: "Carrers",
-    path: "/Carrers",
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Carrers",
+  //   path: "/Carrers",
+  //   cName: "nav-text",
+  // },
   {
     title: "ContactUs",
-    path: "/ContactUs",
+    path: "/Contact",
     cName: "nav-text",
   },
 ];

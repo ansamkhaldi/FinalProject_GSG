@@ -3,10 +3,10 @@ import "./App.css";
 import React from "react";
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Container from "@material-ui/core/Container";
-import Header from "./component/Home/Header/Header";
-import CardList from "./component/Home/Card/CardList";
-import CardNumber from "./component/Home/Card/CardNumbers";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -16,11 +16,20 @@ function App() {
         maxWidth
         style={{ backgroundColor: "", height: "100vh" }}
       > */}
-      <Navbar />
-      <Header />
-      <CardList />
-      <CardNumber />
+      <Router>
+        <Navbar />
 
+        <Switch>
+          <div>
+            <Route exact path="/Contact">
+              <Contact />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </div>
+        </Switch>
+      </Router>
       {/* </Container> */}
       <Footer />
     </div>

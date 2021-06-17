@@ -2,7 +2,7 @@ import React from "react";
 import useStyles from "./Style";
 import Grid from "@material-ui/core/Grid";
 import { Container, Button } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import { Link } from "react-router-dom";
 import { NavData } from "./NavData";
 import { AppBar } from "@material-ui/core";
 import HeadNav from "./HeadNav";
@@ -36,7 +36,7 @@ export default function Navbar(props) {
             <Grid item xg={1} xs={0}>
               <Logo />
             </Grid>
-            <Grid item xg={9} xs={0}>
+            <Grid item xg={9} xs={0} className={classes.Grid}>
               <nav
                 display="flex"
                 alignItems="flex-center"
@@ -46,12 +46,10 @@ export default function Navbar(props) {
                 {NavData.map((item, index) => {
                   return (
                     <Link
-                      textTransform="none"
-                      underline="none"
-                      p={1}
-                      variant="button"
-                      href="#"
-                      className={classes.Link}
+                      // p={1}
+
+                      to={item.path}
+                      className={classes.link}
                     >
                       {item.title}
                     </Link>

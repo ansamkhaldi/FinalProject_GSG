@@ -18,7 +18,7 @@ const CardNumbersData = [
       "We offer office delivery to our Rx Concierge clients. Contact Us for more information about how you join.",
   },
   {
-    title: "Home Delivery",
+    title: "Travel Vaccines",
     id: "04",
     text:
       "We over vaccinations to keep you happy and healthy. Contact us to learn about the right vaccines for you.",

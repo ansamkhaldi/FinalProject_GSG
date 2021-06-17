@@ -43,11 +43,17 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.typography.body1.fontFamily,
     textAlign: "start",
   },
+  Grid: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "5px",
+  },
   link: {
     color: theme.palette.grey[200],
-    fontSize: "14px",
+    fontSize: "15px",
     lineHeight: 1.2,
     fontFamily: theme.typography.body1.fontFamily,
+    textDecoration: "none",
     margin: "0px 5px",
     "&:hover": {
       color: theme.palette.primary.dark,

@@ -13,13 +13,24 @@ export default function CardList(props) {
           {CardData.map((data, index) => {
             return (
               <Card backgroundImage={data.img}>
-                <p>{data.title}hhhhh</p>
-                <h4>{data.type}</h4>
+                <p className={classes.txt_1}>{data.title}</p>
+                <h4 className={classes.head}>{data.type}</h4>
                 <p>
-                  <span>{data.price}</span>
-                  <span>{data.firstPrice}</span>
+                  <strong className={classes.Price}>{data.price}</strong>
+                  <span className={classes.firstPrice1}>
+                    <span className={classes.firstPrice}>
+                      {data.firstPrice}
+                    </span>
+                  </span>
                 </p>
-                <Button>dddddd</Button>
+                <Button
+                  className={classes.ButtonContact}
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                >
+                  Contact Us
+                </Button>
               </Card>
             );
           })}
